@@ -11,6 +11,7 @@
         @livewireStyles
     </head>
     <body>
+        <livewire:sidebar/>
         {{ $slot }}
 
         @livewireScripts

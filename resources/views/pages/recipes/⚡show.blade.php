@@ -7,9 +7,9 @@ new class extends Component
 {
     public Recipe $recipe;
 
-    public function mount()
+    public function mount($recipe)
     {
-        $this->recipe = Recipe::latest()->first();
+        $this->recipe = $recipe;
     }
 };
 ?>
