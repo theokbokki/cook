@@ -12,7 +12,10 @@
     </head>
     <body>
         <livewire:sidebar/>
-        {{ $slot }}
+
+        <main>
+            {{ $slot }}
+        </main>
 
         @livewireScripts
     </body>

@@ -2,7 +2,32 @@
 @use 'colors';
 
 body {
+    display: flex;
+    gap: rem(12);
+    width: calc(100vw - rem(20));
+    height: calc(100vh - rem(16));
+    padding: rem(8) rem(8) rem(8) rem(12);
     font-family: ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
     font-size: rem(14);
     color: colors.$neutral-800;
+    background: url('../img/background.jpg');
+    background-size: cover;
+
+    &:before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(colors.$white, .85);
+        backdrop-filter: blur(15px);
+        z-index: -1;
+    }
+}
+
+main {
+    flex: 1;
+    height: calc(100vh - rem(64));
+    padding: rem(24);
+    background: rgba(colors.$white, .65);
+    border-radius: rem(20);
+    box-shadow: 0 0 rem(24) rem(-12) rgba(colors.$black, .2);
 }

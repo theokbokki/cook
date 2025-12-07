@@ -2,8 +2,6 @@
 @use '../colors';
 
 .sidebar {
-    padding: rem(16) rem(12);
-
     &__subtitle {
         font-size: rem(12);
         color: colors.$neutral-500;
@@ -22,8 +20,14 @@
     }
 
     &__link {
-        display: flex;
+        display: inline-block;
+        width: rem(216);
         padding: rem(10);
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        text-decoration: none;
+        color: colors.$neutral-800;
         border-radius: rem(8);
 
         &[data-selected="1"] {
