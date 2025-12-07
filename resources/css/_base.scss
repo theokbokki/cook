@@ -1,0 +1,8 @@
+@use 'utils' as *;
+@use 'colors';
+
+body {
+    font-family: ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    font-size: rem(14);
+    color: colors.$neutral-800;
+}

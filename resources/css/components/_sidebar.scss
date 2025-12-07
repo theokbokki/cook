@@ -1,0 +1,38 @@
+@use '../utils' as *;
+@use '../colors';
+
+.sidebar {
+    padding: rem(16) rem(12);
+
+    &__subtitle {
+        font-size: rem(12);
+        color: colors.$neutral-500;
+    }
+
+    &__section {
+        display: flex;
+        flex-direction: column;
+        gap: rem(8);
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: rem(4);
+    }
+
+    &__link {
+        display: flex;
+        padding: rem(10);
+        border-radius: rem(8);
+
+        &[data-selected="1"] {
+            background: linear-gradient(to bottom, rgba(colors.$white, .85), rgba(colors.$neutral-100, .85));
+            box-shadow: 0 rem(4) rem(8) rem(-2) rgba(colors.$black, .15);
+        }
+
+        &:hover:not([data-selected="1"]) {
+            background: rgba(colors.$black, .05);
+        }
+    }
+}
