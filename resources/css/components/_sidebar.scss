@@ -2,6 +2,53 @@
 @use '../colors';
 
 .sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: rem(24);
+    height: calc(100vh - rem(16));
+    overflow: scroll;
+
+    &__user {
+        display: flex;
+        align-items: center;
+        margin-top: rem(10);
+    }
+
+    &__avatar {
+        width: rem(18);
+        margin-right: rem(4);
+    }
+
+    &__search {
+        display: flex;
+        align-items: center;
+        position: relative;
+        color: colors.$neutral-800;
+        width: 100%;
+        padding: rem(10) rem(10) rem(10) rem(26);
+        line-height: 100%;
+        font-size: rem(14);
+        background: rgba(colors.$black, .05);
+        border: none;
+        border-radius: rem(8);
+
+        &:before {
+            content: "";
+            position: absolute;
+            left: rem(10);
+            width: rem(14);
+            height: rem(14);
+            background-image: url('../../img/search.svg');
+            background-size: cover;
+            pointer-events: none;
+        }
+
+        &:hover {
+            background: rgba(colors.$black, .1);
+            cursor: pointer;
+        }
+    }
+
     &__subtitle {
         font-size: rem(12);
         color: colors.$neutral-500;

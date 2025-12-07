@@ -22,6 +22,13 @@ new class extends Component
 <nav class="sidebar">
     <h2 class="sro">Main navigation</h2>
     <div class="sidebar__section">
+        <div class="sidebar__user">
+            <img src="https://avatars.githubusercontent.com/u/90846584?v=4" alt="" class="sidebar__avatar"/>
+            <p>Théoo</p>
+        </div>
+        <button type="button" class="sidebar__search">Search</button>
+    </div>
+    <div class="sidebar__section">
         <p class="sidebar__subtitle">Recipes</p>
         <ul class="sidebar__list">
         @foreach($recipes as $recipe)
